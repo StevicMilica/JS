@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Uvod u JS</title>
+    </head>
+    <body>
+        <h1>Osnovi programiranja u JavaScript-u</h1>
+        <script>
+            document.write("<h3>Ovo je heading</h3>")
+            document.write("<p>Ovo je paragraf</p>")
+
+            function javaScriptFunction(){
+                x = document.getElementById("demo")
+                x.style.color = "#ff0000"
+            }
+        </script>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = 'Uspesno dinamicki dodat tekst'">Click!</button>
+        <button type="button" onclick="javaScriptFunction()">Call function!</button>
+        <p id="demo"></p>
+    </body>
+</html>
