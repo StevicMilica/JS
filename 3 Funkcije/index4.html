@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <p>Klikni na dugme kako bi pozvao fju</p>
+        <script type="text/javascript">
+            function concatenante(first, last){
+                var full
+                full = first + "," + last
+                return full 
+            }
+            function secondFunction(){
+                var result
+                result = concatenante ("Milica", "Stevic")
+                document.write(result)
+            }
+        </script>
+        <form>
+            <input type="button" onclick="secondFunction()" value="Pozovi funkciju">
+        </form>
+        <p>Koristi razlicite parametre u fji</p>
+    </body>
+</html>

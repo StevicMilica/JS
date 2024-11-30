@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anonimna funkcija</title>
+    </head>
+    <body>
+        <h1>Anonimna funkcija</h1>
+        <h2>
+            JS nam omogucava da  definisemo fju bez imena - anonimnu fju.
+            Anonimna fja mora biti dodeljena promenljivoj.
+        </h2>
+        <h3>
+            Anonimna fja je korisna pri prosledjivanju fje povratnog poziva,
+            kreiranju zatvaranja ili neposredno pozvanog izraza fje
+        </h3>
+        <script>
+            const showMessage = function(){
+                alert("Hello World!")
+            }
+            showMessage();
+
+            const sayHello = function(firstName){
+                alert("Hello " + firstName)
+            }
+            sayHello("Milica")
+        </script>
+    </body>
+</html>

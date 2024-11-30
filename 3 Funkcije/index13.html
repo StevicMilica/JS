@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <h1>Prednosti zatvaranja i prakticnost toga</h1>
+        <h2>Privatni prostor imena</h2>
+        <h2>Unutrasnja funkcija pamti okruzenje u kome je stvorena</h2>
+        
+        <script>
+            function counter(){
+                let count = 0
+                return function(){
+                    count = count + 1
+                    return count
+                }
+            }
+            const increment = counter()
+            console.log(increment());//1
+            console.log(increment());//2
+            console.log(increment());//3
+            //console.log(count); error
+            //Pokusaj pristupa count promenljivoj daje gresku u referenci jer 
+            //nije izlozena globalnom okruzenju   
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ugnezdjene funkcije</title>
+    </head>
+    <body>
+        <h1>Nested (ugnezdjene) funkcije</h1>
+        <h3>
+            Funkcija moze imati jednu ili vise unutrasnjih funkcija. 
+            Ove ugnezdjene fje su u delokrugu spoljasnje fje.
+            Unutrasnja fja moze pristupiti promenljivim i parametrima spoljasnje fje, ali 
+            spoljasnja fja ne moze pristupiti promenljivim definisanim u unutrasnjim funkcijama.
+        </h3>
+        <script>
+            function showMessage(firstName){
+                function sayHello(){
+                    alert("Hello " + firstName)
+                }
+                return sayHello()
+            }
+            showMessage('Milica')
+        </script>
+    </body>
+</html>

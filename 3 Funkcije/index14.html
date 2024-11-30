@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <h1>Stanja za visekratnu upotrebu</h1>
+        <h2>
+            Posto je count privatno obuhvacen, mozemo stvoriti razne
+            primere brojaca i njihove count promenljive se nece preklapati.
+        </h2>
+        <script>
+            function counter(){
+                let count = 0
+                return function(){
+                    count += 1
+                    return count
+                }
+            }
+            const incrementBananaCount = counter()
+            const incrementAppleCount = counter()
+            console.log(incrementBananaCount());//1
+            console.log(incrementBananaCount());//2
+            console.log(incrementAppleCount());//1
+            console.log(incrementAppleCount());//2
+            console.log(incrementAppleCount());//3
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <h1>Arrow funkcija</h1>
+        <h2>
+            Ili takozvana "fat arrow" je nova sintaksa za pisanje JS funkcija.
+            Najbitnija k-ka je kraca sintaksa koja implicira bolju preglednost.
+            U zavisnosti od broja parametara i tela f-je, sintaksa ima vise nacina
+            pisanja koda 
+        </h2>
+        <script>
+            /*
+            Izgled sintakse kada telo f-je ima vise izraza.
+            Sintaksa arrow f-je je najslicnija obicnoj f-ji, a jedina razlika se dobija
+            ukidanjem kljucne reci "function" i dodavanjem "fat arrow". 
+            Ova sintaksa se koristi kada u telu f-je ima vise izraza 
+            */
+
+            //ES5
+            const multiply = function (x,y){
+                const text = 'Ovo je funkcija'
+                console.log(text);
+            }
+            //ES2015
+            const multiply1 = (x,y) => {
+                const text = "Ovo je funkcija"
+                console.log(text);
+            }
+
+            /*
+            Izgled f-je kada telo sintakse ima jedan izraz.
+            Ako telo ima jedan izraz koji je vracen sa "return", onda mozemo da 
+            izbacimo i {} i "return"
+            */
+
+            //ES5
+            const multiply2 = function(x,y){
+                return x * y
+            }
+            console.log(multiply2());
+            
+            //ES2015
+            const multiply4 = (x,y) => x * y
+            console.log(multiply4());
+            
+            /*
+            Izgled sintakse kada se f-ji ne prosledjuju parametri
+            Ako se f-ji ne prosledjuju parametri, moraju da postoje prazne 
+            zagrade () u delu rezervisanom za parametre f-je
+            */
+           //ES5    
+           const stampa = function(){
+            console.log("Stampa iz obicne f-je");
+           }
+           //ES2015
+           const stampa1 = () => {console.log("Stampa iz arrow f-je")};
+
+           /*
+           Izgled sintakse kada se f-ji prosledjuje samo jedan parametar
+           Ako se f-ji prosledjuje samo 1 parametar, onda se zagrade oko
+           parametara mogu izbaciti.
+           */
+
+           //ES5
+           var duplo = function(x){
+            return x *2
+           }
+           //ES2015
+           var duplo1 = x => x * 2
+        </script>
+    </body>
+</html>

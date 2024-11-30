@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Closure</title>
+    </head>
+    <body>
+        <h1>JS Closure</h1>
+        <p>Closure (Zatvaranje) je funkcija koju vraca druga funkcija.
+            Izgleda kao kontejner za pamcenje promenljivih i parametara iz maticnog
+            podrucja cak iako je roditeljska fja izvrsena.
+        </p>
+        <script>
+            function sayHello(){
+                const greeteng = "Hello World!"
+                return function(){//anonimna funkcija
+                    console.log(greeteng);
+                    
+                }
+            }
+            const hello = sayHello()//hello sadrzi vracenu fju
+            hello()
+
+            function sayHello(){
+                const greeteng = "Hello World!"
+                return function hello(){
+                    console.log(greeteng);
+                }
+            }
+            const hello1 = sayHello()
+            hello()//hello world
+
+            function sayHello2(){
+                const greeteng = "Hello World/2"
+
+                function hello(){
+                    console.log(greeteng);
+                }
+                return hello
+            }
+            const hello2 = sayHello2()
+            hello2()
+
+            function sayHello3(){
+                const greeteng = "Hello World/3"
+                const hello = () => {
+                    console.log(greeteng);
+                }
+                return hello
+            }
+            const hello3 = sayHello3()
+            hello3()
+        </script>
+    </body>
+</html>

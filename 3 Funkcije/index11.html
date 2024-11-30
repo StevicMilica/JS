@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IIFE</title>
+    </head>
+    <body>
+        <h1>IIFE (Immediatly Invoked Function Expression)</h1>
+        <h2>
+            Funkcija se pokrece cim je definisana. Ovde je izraz funkcije
+            prilozen unutar operatora grupisanja ().
+        </h2>
+        <h2>Mi definisemo fju i pozivamo je kasnije bilo koji broj puta, ali ako je zelimo 
+            samo jednom pozvati da proizvede izlaz koristimo IIFE.
+            Program se odmah izvrsava i nikada vise u buducnosti mu program ne moze pristupiti.
+            Posto se ne poziva ponovo, ne treba mu ime, pa se za IIFE koristi naziv anonimna fja.
+        </h2>
+        <script>
+            document.write((function(){
+                let num = 4
+                return num    
+            })())           
+
+            (function(){
+                let x = 20
+                let y = 10
+                let sum = x + y
+                console.log(sum);   
+            })()
+        </script>
+    </body>
+</html>

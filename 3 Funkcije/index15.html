@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <h1>Module design pattern (obrazac dizajna modula)</h1>
+        <h2>
+            Obrazac dizajna modula je popularna konvencija za arhitekturu JS aplikacija. 
+            Koristi IIFE (izraz odmah pozvane funkcije) za vracanje objekata i izlaze samo
+            one promenljive i metode koje zelimo da objavimo.
+        </h2>
+        <script>
+            let dog = (function(){
+                let name = "Dzeki"
+
+                const getName = () => {
+                    return name
+                }
+                const changeName = (newName) => {
+                    name = newName  
+                }
+                return {
+                    getName: getName,   
+                    changeName: changeName
+                }
+            }())
+            console.log(name);//undefined
+            dog.getName()//Dzeki
+            dog.changeName("Bleki")
+            dog.getName()
+
+            console.log(dog.getName());
+            console.log(dog.changeName());
+            console.log(dog.getName());
+
+            //Cim se kod pokrene, fja izvrsava i vraca objekat koji se sprema u dog.
+            //Ovaj obrazac se vraca na cuvanje prostora naseg imena privatnim i otkriva 
+            //ono sto zelimo kao javne metode i promenljive kroz oblik objekta.
+            
+        </script>
+    </body>
+</html>

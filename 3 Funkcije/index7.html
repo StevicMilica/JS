@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funkcija koja vraca funkciju</title>
+    </head>
+    <body>
+        <h1>Funkcija koja vraca funkciju</h1>
+        <p id="p1"></p>
+        <p id="p2"></p>
+
+        <script>
+            function multiple(x){
+                function fn(y){
+                    return x * y
+                }
+                return fn
+            }
+
+            let triple = multiple(3)//mnozi sa 3 x i y
+
+            document.getElementById("p1").innerHTML = triple(2)//3*2=6
+            document.getElementById("p2").innerHTML = triple(4)//3*4=12
+        </script>
+    </body>
+</html>
