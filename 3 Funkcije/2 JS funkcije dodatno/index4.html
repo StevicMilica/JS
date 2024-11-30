@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS funkcije</title>
+    </head>
+    <body>
+        <script>
+            //counter f-ja (f-ja zatvaranja) JS closure
+            //f-ja counter vraca anonimnu f-ju koja povecava count promenljivu za 1
+            function counter(){
+                let count = 0
+                return function(){
+                    count ++
+                    return count
+                }
+            } 
+            //konstanta increment postaje f-ja (f-ski izraz)
+            const increment = counter()
+            console.log(increment());//1
+            console.log(increment());//2
+            
+            const apple = counter()
+            console.log(apple());//1
+            console.log(apple());//2
+            console.log(apple());//3
+        </script>
+    </body>
+</html>

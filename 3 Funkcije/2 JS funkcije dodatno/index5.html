@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS funkcije</title>
+    </head>
+    <body>
+        <h1>Strelicaste funkcije</h1>
+        <script>
+            //ES5 2009 (function expression)
+            const multiple = function(x,y){
+                const text = 'Ovo je f-ski izraz'
+                console.log(text);
+            }
+            multiple()
+
+
+            //ES6 2015 (fat arrow) strelicasta f-ja
+            const multiple1 = (a,b) => {
+                const text1 = "Ovo je strelicasta f-ja"
+                console.log(text1);
+            }
+            multiple1()
+
+
+            //ES5 2009 (function expression)
+            const multiple2 = function(k,n){
+                return k * n
+            }
+            console.log(multiple2(2,3));//6
+
+            //ES6 2015 (fat arrow) strelicasta f-ja
+            const multiple3 = (q,w) => q * w
+            console.log(multiple3(4,3));
+            
+            //ES5 2009 (function expression)
+            const stampa = function(){
+                console.log("Poruka");
+            }
+            stampa()
+
+            //ES6 2015 (fat arrow) strelicasta f-ja
+            const stampa1 = () => console.log("Stampaj poruku");
+            stampa1()
+
+            //ES5 2009 (function expression)
+            const kvadriraj = function(c){
+                return c * c
+            }
+            console.log(kvadriraj(4));
+            
+            //ES6 2015 (fat arrow) stralicasta f-ja
+            const kvadriraj1 = d => d * d
+            console.log(kvadriraj1(5));
+        </script>
+    </body>
+</html>

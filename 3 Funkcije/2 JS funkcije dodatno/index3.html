@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS funkcije</title>
+    </head>
+    <body>
+        <h1>F-ja koja vraca f-ju</h1>
+        <p id="id1"></p>
+        <p id="id2"></p>
+
+        <script>
+            //spoljasnja f-ja
+            function mnozenje(x){
+                //unutrasnja f-ja 
+                function fn(y){
+                return x * y
+                }   
+                return fn
+            }
+            //vraca definiciju f-je fn
+            console.log(mnozenje(2));
+            //vraca definicjicu f-je mnozenje
+            console.log(mnozenje);
+            //konstanra "rezultat" je sada f-ja jer "mnozenje" vraca definiciju f-je "fn"
+            const rezultat = mnozenje(3)
+            
+            //paragrafima upisujemo vrednost innerHTML 
+            document.getElementById("id1").innerHTML = rezultat(2)
+            document.getElementById("id2").innerHTML = rezultat(3)
+        </script>
+    </body>
+</html>
