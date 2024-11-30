@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #kocka{
+                width: 100px;
+                height: 100px;
+                background-color: lightblue;
+                position: absolute;
+                left: 100px;
+                top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Kocka</h1>
+        <div id="kocka">Kocka</div>
+        <script>
+            const kocka = document.getElementById('kocka')
+            kocka.zakljucano = false
+
+            document.addEventListener('mousemove', e =>{
+                if(kocka.zakljucano)
+                    return 
+                        kocka.style.left = e.clientX + 'px'
+                        kocka.style.top = e.clientY + 'px'
+            })
+            kocka.addEventListener('click', function(){
+                kocka.zakljucano = !kocka.zakljucano
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #kutijica{
+                width: 200px;
+                height: 200px;
+                background-color: violet;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Dodela atributa u HTML</h1>
+        <div id="kutijica"></div>
+        <script>
+            kutijica.onclick = function(){
+                document.write("Dogadjaj 1")
+            }
+            //svaka sledeca f-ja "gazi" prethodnu zbog =
+            kutijica.onclick = function(){
+                document.write('Dogadjaj 2')//ova metoda se samo koristi za isprobavanje
+            }
+            kutijica.onclick = function(){
+                document.write("Dogadjaj 3")
+            }
+        </script>
+    </body>
+</html>

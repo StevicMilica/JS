@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #kutija{
+                height: 200px;
+                width: 200px;
+                background-color: violet;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>AddEventListener</h1>
+        <div id="kutija"></div>
+        <script>
+            //moze se dodati vise dogadjaja na isti element
+            kutija.addEventListener('click', function(){
+                document.write("Dogadjaj 1")
+            })
+            kutija.addEventListener('click', function(){
+                document.write("Dogadjaj 2")
+            })
+            kutija.addEventListener('click', function(){
+                document.write("Dogadjaj 3")
+            })
+        </script>
+    </body>
+</html>
