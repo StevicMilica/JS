@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const proveri = () =>{
+                const pristupFormi = document.mojaForma
+                const unos = pristupFormi.mojUlaz//pristup input polju
+
+                console.log(pristupFormi);
+                console.log(unos);
+                console.log(unos.value);//uzima vrednost iz input polja
+
+                if(unos.value.length > 5){
+                    alert("Uneli ste vise od 5 karaktera")
+                    return false //false vracamo da bi stopirali formu da salje podatke
+                }else{
+                    return true //omogucavamo formi da salje podatke
+                }   
+            } 
+        </script>
+        <form name="mojaForma" action="https://www.google.rs" onsubmit="return proveri()">
+            <input type="text" name="mojUlaz">
+            <input type="submit" value="Posalji">
+        </form>
+    </body>
+</html>

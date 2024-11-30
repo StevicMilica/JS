@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const izaberi = x =>{
+                console.log(x);
+                location.href = x.options[x.selectedIndex].value
+                //location je objekat windows objekta
+                //href je atribut (property) location objekta i sluzi da nas odvede na neku stranicu    
+                //x je pristup selectu, options je niz select-a
+            }
+        </script>
+
+        <form>
+            <select name="meni">
+                <option value="https://www.google.rs">Google</option>
+                <option value="https://www.youtube.com">Youtube</option>
+                <option value="https://www.instagram.com">Instagram</option>
+            </select>
+            <input type="button" value="izaberi" onclick="izaberi(this.form.meni)">
+        </form>
+    </body>
+</html>

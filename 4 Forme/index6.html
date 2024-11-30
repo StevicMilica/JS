@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kalkulator</h1>
+    <script>
+        const sabiranje = x => {
+            const broj1 = x.broj1.value
+            const broj2 = x.broj2.value
+            const suma = Number(broj1) + Number(broj2)
+            x.rezultat.value = suma
+        }
+        const oduzimanje = x =>{
+            const broj1 = x.broj1.value
+            const broj2 = x.broj2.value
+            const razlika = Number(broj1) - Number(broj2)
+            x.rezultat.value = razlika
+        }
+        const deljenje = x =>{
+            const broj1 = x.broj1.value
+            const broj2 = x.broj2.value
+            const kolicnik = Number(broj1) / Number(broj2)
+            x.rezultat.value = kolicnik
+        }
+        const mnozenje = x =>{
+            const broj1 = x.broj1.value
+            const broj2 = x.broj2.value
+            const proizvod = Number(broj1) * Number(broj2)
+            x.rezultat.value = proizvod
+        }
+        const stepenovanje = x =>{
+            const broj1 = x.broj1.value
+            const broj2 = x.broj2.value
+            const stepenovajne = Math.pow(Number(broj1),Number(broj2))
+            x.rezultat.value = stepenovanje
+        }
+    </script>
+    <form>
+        Unesi prvi broj: <br>
+        <input type="text" name="broj1"> <br>
+        Unesi drugi broj: <br>
+        <input type="text" name="broj2"><br><br>
+
+        <input type="button" value="+"  onclick="sabiranje(this.form)">
+        <input type="button" value="-" onclick="oduzimanje(this.form)">
+        <input type="button" value="/" onclick="deljenje(this.form)">
+        <input type="button" value="*" onclick="mnozenje(this.form)">
+        <input type="button" value="^" onclick="stepenovanje(this.form)"> <br>
+        
+        Rezultat: <br>
+        <input type="text" name="rezultat">
+    </form>
+</body>
+</html>

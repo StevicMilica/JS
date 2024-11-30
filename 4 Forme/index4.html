@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head> 
+    <body>
+        <script>
+            const test = x =>{
+                console.log(x);
+                console.log(this);//this je pristup objektu
+                console.log(this.document);
+                if(x.name.value == ''){
+                    alert('Unesite nesto u input polje')
+                }else{
+                    alert("Vase ime je: " + x.name.value)
+                }
+            }
+            const test1 = x =>{
+                console.log(x);
+                //indexOf je predefinisana f-ja JS-a i sluzi da proverimo za string da li 
+                //sadrzi odredjeni karakter ili skup karaktera. Ako ne pronadje znak, vraca -1
+                //ako znak postoji, vraca 1.Ima 2 argumenta(sta se trazi, od koje pozicije se trazi)
+                if(x.email.value == '' || x.email.value.indexOf('@',0) == -1){
+                    alert('Neispravan email')
+                }else{
+                    alert("Vas email je: " + x.email.value)
+                }
+            }
+        </script>
+        <form>
+            Unesite ime: <br>
+            <input type="text" name="name">
+            <input type="button" value="testiraj" onclick="test(this.form)"> <br>
+            Unesite email: <br>
+            <input type="text" name="email">
+            <input type="button" value="testiraj" onclick="test1(this.form)">
+        </form>
+    </body>
+</html>
