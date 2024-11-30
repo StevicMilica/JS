@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <h1>Dogadjaji</h1>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <button id="btnDemo">Click!</button> <br><br>
+        <button id="btn1">Click!</button> <br><br>
+        <button id="btn3">Click!</button> <br><br>
+        <button id="btn4">Click!</button> <br><br>
+        <button id="btn5">Click!</button> <br><br>
+        <button id="btn6">Mnozenje</button> <br><br>
+        Odaberi broj da bi pomnozio sa 5: <br>
+        <input type="number" id="inputDemo">
+        <script>
+            //definisanje obradjivaca dogadjaja (event handler-a) onclick
+            document.getElementById('btnDemo').onclick = funkcija
+            function funkcija(){
+                alert("Poruka")
+            }
+
+            document.getElementById("btn1").onclick = funkcija1
+            function funkcija1(){
+                document.getElementById("demo").innerHTML = "Pozvana je f-ja 2"
+            }
+
+            document.getElementById("btn3").onclick = funkcija2
+            //podrazumevani argument funkcije
+            function funkcija2(e){
+                alert(e)
+            }
+            
+            document.getElementById("btn4").onclick = funkcija4
+            function funkcija4(){
+                a = 10
+                b = 20
+                document.getElementById("demo1").innerHTML = a * b
+            }
+
+            document.getElementById("btn5").addEventListener('click', function(){
+                funkcija5(4,3)
+            })
+            function funkcija5(a1,b1){
+                document.getElementById("demo2").innerHTML = a1 * b1
+            }
+
+            document.getElementById("btn6").addEventListener('click', function(){
+                funkcija6(document.getElementById("inputDemo").value, 5)
+            })
+            function funkcija6(c,d){
+                document.getElementById("demo3").innerHTML = c * d
+            }
+        </script>
+    </body>
+</html>
