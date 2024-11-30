@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script type="text/javascript">
+            function sabiranje(form){
+                let a = form.a.value
+                let b = form.b.value
+                let c = a + b
+                form.rezultat.value = c
+            }
+            function oduzimanje(form){
+                let a = form.a.value
+                let b = form.b.value
+                let c = a - b
+                form.rezultat.value = c  
+            }
+            function mnozenje(form){
+                let a = form.a.value
+                let b = form.b.value
+                let c = a * b
+                form.rezultat.value = c
+            }
+            function deljenje(form){
+                let a = form.a.value
+                let b = form.b.value
+                let c = a / b
+                form.rezultat.value = c
+            }
+            function kvadriranje(form){
+                let a = form.a.value
+                let b = form.b.value
+                let c = Math.pow(a,b)
+                form.rezultat.value = c
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Digitron</h1>
+
+        <form>
+            Unesite prvi broj: <br>
+            <input type="number"  name="a"> <br>
+            Unesite drugi broj: <br>
+            <input type="number" size="4" name="b"> <br> 
+            Rezultat: <br>
+            <input type="number" value="0" name="rezultat" size="9">
+
+            <input type="button" value=" + " onclick="sabiranje(this.form)">
+            <input type="button" value=" - " onclick="oduzimanje(this.form)">
+            <input type="button" value=" * " onclick="mnozenje(this.form)">
+            <input type="button" value=" / " onclick="deljenje(this.form)">
+            <input type="button" value=" ^ " onclick="kvadriranje(this.form)">
+
+
+        </form>
+    </body>
+</html>

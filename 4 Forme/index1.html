@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script>
+            //provera da li je unet podatak
+            function test(form){
+                if(form.text.value == "")
+                    alert("Morate upisati podatak!")
+                else{
+                    alert('Ako je vase ime ' + form.text.value + ', upis je ispravan!')
+                }
+            }
+            function test1(form){
+                //provera da li je u email upisano @
+                if(form.text1.value == "" || form.text1.value.indexOf('@',0) == -1)
+                    alert("Neispravna email adresa")
+                else 
+                    alert("Ako je vasa adresa " + form.text1.value + "upis je ispravan")
+            }            
+        </script>
+    </head>
+    <body>
+        <form>
+            Upisite ime: <br>
+            <input type="text" name="text">
+            <input type="button" value="Test" onclick="test(this.form)"> <br>
+
+            Unesite email: <br>
+            <input type="text" name="text1">
+            <input type="button" value="Test" onclick="test1(this.form)">
+        </form>
+    </body>
+</html>

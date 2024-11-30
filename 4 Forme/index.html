@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function proveri(){
+                x = document.mojaForma
+                input = x.mojUlaz.value
+                if(input.length > 5){
+                    alert('Ne smete uneti vise od 5 karaktera')
+                    return false
+                }else{
+                    return true
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="mojaForma" action="https://google.rs" onsubmit="return proveri()">
+            Unesite najvise 5 karaktera: <br><br>
+            <input type="text" name="mojUlaz">
+            <input type="submit" value="Posalji">
+        </form>
+    </body>
+</html>

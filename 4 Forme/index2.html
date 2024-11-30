@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script>
+            function ucitajMeni(meni){
+                location.href = meni.options[meni.selectedIndex].value
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <select name="meni" size="6">
+                <option value="https://wwww.google.rs">Google</option>
+                <option value="https://www.youtube.com">Youtube</option>
+                <option value="http://www.gmail.com">Gmail</option>
+                <option value="https://www.fon.rs">FON</option>
+                <option value="">Sesta opcija</option>
+            </select><br><br>
+            <input type="button" value="Izaberi opciju" onclick="ucitajMeni(this.form.meni)">
+        </form>
+    </body>
+</html>
