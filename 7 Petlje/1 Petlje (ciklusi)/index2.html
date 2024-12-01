@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <h1>Fibonacijev niz</h1>
+        <script>
+            let a = 0
+            let b = 1
+            let novi = 0
+
+            while(novi < 100){
+                novi = a + b
+                console.log(novi);
+                a = b
+                b = novi
+            }
+        </script>
+    </body>
+</html>
