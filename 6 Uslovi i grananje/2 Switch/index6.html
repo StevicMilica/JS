@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <h1>Scope - oblast vazenja</h1>
+        <script>
+            const weather = 'thunder'
+            //ILI: let notification = ''
+            switch(weather){
+                case 'rain':{
+                    const notification = "Rain day"//notification = '...'
+                    console.log(notification);
+                    break
+                }
+                case 'thunder':
+                    const notification = 'Thunder day'
+                    console.log(notification + 'Be careful');
+                    break
+                }
+        </script>
+    </body>
+</html>

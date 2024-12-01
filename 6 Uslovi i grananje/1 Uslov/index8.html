@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            const text = 
+            `Nalazis se u mracnoj sumi, jure te trolovi. Sa leve strane je reka a sa desne litica. Gore je pecina, dole je kanjon. Na koju stranu ces krenuti?`
+            const pravac = prompt(text)
+
+            const idiLevo = () =>{
+                const preplivava = confirm(`Naisao si na veliku reku. Da li ces je preplivati?`)
+                preplivava ? alert('Uspesno si preplivao reku!') : alert('Zavrsio si')
+            }
+
+            const idiDesno = () =>{
+                const silazi = confirm('Naisao si na liticu. Da li ces je preskociti?')
+                silazi ? alert('Uspesno si preskocio') : alert('Izgubio si')
+            }
+            switch(pravac){
+                case 'levo':
+                    idiLevo()
+                    break
+                case 'desno':
+                    idiDesno()
+                    break
+                case 'gore':
+                    alert('Popeo si se do pecine')
+                    break
+                case 'dole':
+                    alert('Sisao si u kanjon')
+                    break
+                default:
+                    alert('Niste izabrali pravac')
+            }
+        </script>
+    </body>
+</html>
