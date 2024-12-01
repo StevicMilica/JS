@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <h1>Zaustavljanje propagacije dogadjaja</h1>
+        <h2>
+            Pozivanjem e.stopPoropagation() na ciljnom elementu Zaustavlja
+            propagaciju dogadjaja na roditelje.
+        </h2>
+        <p>Objekat dogadjaja se po konvenciji oznacava <strong> e (event) </strong></p>
+        
+        <button id="dugme">Click!</button>
+        <script>
+            document.getElementById("dugme").addEventListener('click', function(e){
+                alert('Klikni na dugme')
+                e.stopPropagation()
+            })
+
+            document.body.addEventListener('click', function(){
+                alert("Klikni na body")
+            })
+            document.addEventListener('click', function(){
+                alert('Klikni na document')
+            })
+
+            window.addEventListener('click', function(){
+                alert("Klikni na prozor")
+            })
+        </script>
+    </body>
+</html>

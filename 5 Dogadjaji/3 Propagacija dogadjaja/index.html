@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <h1>Propagacija dogadjaja nanize (capturing)</h1>
+        <button id="dugme">Click!</button>
+
+        <script>
+            //slusac dogadjaja na dugmetu - cetvrto se izvrsava
+            document.getElementById("dugme").addEventListener('click', function(){
+                alert("Klikni na dugme")
+            }, true)
+            
+            //slusac dogadjaja na body-u - trece se izvrsava
+            document.body.addEventListener('click', function(){
+                alert("Klikni na telo dokumenta")
+            }, true)
+
+            //slusac dogadjaja na dokumentu - drugo se izvrsava
+            document.addEventListener('click', function(){
+                alert("Klikni na dokument")
+            }, true)
+
+            //slusac dogadjaja na prozoru pregledaca - prvo se izvrsava
+            window.addEventListener('click', function(){
+                alert('Klikni na prozor pregledaca')
+            }, true)
+        </script>
+    </body>
+</html>

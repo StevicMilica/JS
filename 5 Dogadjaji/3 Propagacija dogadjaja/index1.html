@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <h1>Propagacija dogadjaja navise (bubbling)</h1>
+        <button id="dugme">Click!</button>
+
+        <script>
+            //prvo se izvrsava
+            document.getElementById("dugme").addEventListener('click', function(){
+                alert("Klikni na dugme")
+            }, false)
+            //drugo
+            document.body.addEventListener('click', function(){
+                alert("Klikni na body")
+            }, false)
+            //trece
+            document.addEventListener('click', function(){
+                alert("Klikni na document")
+            }, false)
+            //cetvrto
+            window.addEventListener('click', function(){
+                alert("Klikni na prozor pregledaca")
+            }, false)
+        </script>
+    </body>
+</html> 

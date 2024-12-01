@@ -9,7 +9,7 @@ console.log(mapirano);//0:1, 1:4, 2:9; length:3
 //Strelicasta f-ja
 const brojevi1 = [1,2,3]
 const mapirano1 = brojevi.map(n => n * n)
-console.log(mapirano1);//0:1, 1:4, 2:9; length:3
+console.log(mapirano1);//0:1, 1:4, 2:9; length:3 - index, element, niz  
 
 //Arrow f-ja
 const brojevi2 = [1,2,3]
