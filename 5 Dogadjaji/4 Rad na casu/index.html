@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <h1>Kalkulator</h1>
+        <form name="forma">
+            Unesi prvi broj: <br>
+            <input type="number" name="broj1"> <br>
+            Unesi drugi broj: <br>
+            <input type="number" name="broj2"> <br><br>
+
+            <input type="button" value="+" onclick="digitron(this.form,this.value)">
+            <input type="button" value="-" onclick="digitron(this.form,this.value)">
+            <input type="button" value="*" onclick="digitron(this.form,this.value)">
+            <input type="button" value="/" onclick="digitron(this.form,this.value)"><br><br>
+
+            Rezultat: <br>
+            <input type="number" name="rezultat" value=" ">
+        </form>
+        <script src="main.js"></script>
+    </body>
+</html>

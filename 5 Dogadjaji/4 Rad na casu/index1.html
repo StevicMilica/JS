@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <h1>Gradovi</h1>
+        <form>
+            <select name="meni">
+                <option value="beograd">Beograd</option>
+                <option value="pristina">Pristina</option>
+                <option value="kragujevac">Kragujevac</option>
+                <option value="nis">Nis</option>
+            </select>
+            <input type="button" value="Prikazi" name="dugme" onclick="zameni(this.form.meni)">
+        </form><br>
+        <iframe id="frame" src="https://naslovi.net/vremenska-prognoza/widget/beograd?big=1&bgcolor=BDCAFF&textcolor=000000" frameborder="0" height="200" scrolling="no" width="200"></iframe>
+        <script src="main1.js"></script>
+    </body>
+</html>
