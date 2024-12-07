@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Tablica mnozenja</h1>
+        <script>
+            let tekst = ''
+            const tablica = x =>{
+                for(let i=1; i <= 10; i++){
+                    tekst += `
+                        <p>${i} * ${x} = ${i*x} </p>
+                    `
+                }
+                return tekst
+            }
+            document.body.innerHTML = tablica(10)
+        </script>
+    </body>
+</html>

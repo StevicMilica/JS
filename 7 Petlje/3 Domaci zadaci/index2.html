@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Meseci</h1>
+        <script>
+            const mesec = prompt('Unesi mesec: ')
+            if(mesec == 'januar' || mesec == 'mart' || mesec == 'maj'
+                || mesec == 'jul' || mesec == 'avgust' || mesec == 'oktobar'
+                || mesec == 'decembar'
+            ){
+                document.write('Mesec ima 31 dan')
+            }else if(mesec == 'april' || mesec == 'jun' || mesec == 'septembar'
+                || mesec == 'novembar'
+            ){
+                document.write("Mesec ima 30 dana")
+            }else if(mesec == 'februar'){
+                document.write('Mesec ima 28 dana')
+            }else{
+                document.write('Pogresan unos!')
+            }
+        </script>
+    </body>
+</html>

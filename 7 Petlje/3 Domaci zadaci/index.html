@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Racunanje proseka</h1>
+        <p id="demo"></p>
+        <script>
+            const prosek = prompt("Unesi prosek: ")
+            if(prosek > 4.5){
+                console.log("Odlican");
+            }else if(prosek < 4.5 && prosek >= 3.5){
+                console.log("Vrlo dobar");
+            }else if(prosek < 3.5 && prosek >= 2.5){
+                console.log("Dobar");
+            }else if(prosek < 2.5 && prosek >= 1){
+                console.log("Nedovoljan");
+            }else{
+                console.log("Pogresan unos");
+            }
+        </script>
+    </body>
+</html>
