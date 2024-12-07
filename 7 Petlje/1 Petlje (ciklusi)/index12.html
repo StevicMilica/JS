@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>
+            Napisati f-ju koja prima broj i vraca zbir njegovih cifara (23=2+3)
+        </h1>
+        <script>
+            function zbirCfara(broj){
+                let zbir = 0
+                while(broj > 0){
+                    zbir = zbir + broj % 10
+                    broj = Math.floor(broj/10)
+                }
+                return zbir
+            }
+            console.log(zbirCfara(123));//6
+        </script>
+    </body>
+</html>
